@@ -5,10 +5,25 @@
 
 
 int unduplify(int* nums, int numc) {
-	
-	int uniques = 0;
-	int position = 1;
+	//prolly better to have if(c<=2)return c; at start to catch edge cases
+		//then run loop later so is faster for longer arrays
+	int pos = 0;
 
+	for (int i = 1; i < numc; i++) {
+		if (nums[i] != nums[pos]) {
+
+			pos++; //couldve put this in the line below
+			nums[pos] = nums[i];
+			
+		} else if (pos==0 || nums[i] != nums[pos-1]) {
+			
+			pos++;
+			nums[pos] = nums[i];
+
+		}
+	}
+
+	return pos+1; //ERR: CANT return 0 if empty / but restraints say is >= 1
 }
 
 
@@ -20,7 +35,7 @@ int main(int argc, char** argv) {
 
 	int uniques = unduplify(nums, c);
 
-	for (int i = 0; i < numc; i++) {
+	for (int i = 0; i < c; i++) {
 
 		printf("%d, ", nums[i]);
 
