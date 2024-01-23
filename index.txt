@@ -7,3 +7,8 @@ leetcode top 150
 6. 189 / Rotate Array
 7. 121 / Best Time to Buy and Sell Stock
 8. 122 / Best time to buy and sell stock 2
+	improvable
+9. 55 / jump game
+	improvable
+10. 45 / jump game 2
+
