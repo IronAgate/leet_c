@@ -10,12 +10,12 @@
 #include <stdio.h>
 //#include <stdlib.h>
 
-int fptp(int* nums, int numc) {
+int fptp(int* nums, int numsSize) {
 
 	int candidate = nums[0];
 	int voteCtr = 1;
 	
-	for (int i = 1; i < numc; i++) {
+	for (int i = 1; i < numsSize; i++) {
 
 		if (voteCtr == 0) {
 			candidate = nums[i];
@@ -33,14 +33,15 @@ int fptp(int* nums, int numc) {
 	// 	dont need in this case
 	// 	would make the alg 2*O(n) which is still 0(n)
 	// also, can make it an if-else with first if, and set votectr directly, to make a bit more efficient.
+		// I did that in the final submission
 }
 
 int main(int argc, char** argv) {
 
 	int nums[] = {3,3,4,4,3,5,4,4,4};
-	int numc = sizeof(nums)/sizeof(int);
+	int numsSize = sizeof(nums)/sizeof(int);
 
-	int president = fptp(nums, numc);
+	int president = fptp(nums, numsSize);
 
 	printf("\n%d\n", president);
 

@@ -1,3 +1,5 @@
+//leetcode 27: remove element / 2/150
+	//not formatted for leetcode
 #include <stdio.h>
 #include <stdlib.h>
 

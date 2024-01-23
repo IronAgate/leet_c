@@ -1,0 +1,9 @@
+leetcode top 150
+1. 88 / merge sorted array
+2. 27 / remove element
+3. 28 / remove duplicates from sorted array
+4. 80 / remove duplicates from sorted array 2
+5. 169 / Majority Element
+6. 189 / Rotate Array
+7. 121 / Best Time to Buy and Sell Stock
+8. 122 / Best time to buy and sell stock 2

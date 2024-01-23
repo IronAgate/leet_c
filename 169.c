@@ -1,4 +1,4 @@
-// leetcode 169 find majority element
+// leetcode 169 find majority element 5/150
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,20 +8,20 @@ int sortNondescending(const void* a, const void* b) {
 	return *(int*)a - *(int*)b;
 }
 
-int fptp(int* nums, int numc) {
+int fptp(int* nums, int numsSize) {
 
-	qsort(nums, numc, sizeof(int), sortNondescending);
+	qsort(nums, numsSize, sizeof(int), sortNondescending);
 
-	return nums[numc/2];
+	return nums[numsSize/2];
 
 }
 
 int main(int argc, char** argv) {
 
 	int nums[] = {4,4,4,2,3,6,2,4,4};
-	int numc = sizeof(nums)/sizeof(int);
+	int numsSize = sizeof(nums)/sizeof(int);
 
-	int president = fptp(nums, numc);
+	int president = fptp(nums, numsSize);
 
 	printf("\n%d\n", president);
 

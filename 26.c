@@ -1,23 +1,20 @@
+//leetcode 26 / remove duplicates from array 1 / 3/150
 #include <stdio.h>
 #include <stdlib.h> 
 
-int setify(int* nums, int numc) {
-	
-	int prev = nums[0];
-	int pos = 0;
+int setify(int* nums, int numSize) {
 
-	for (int i = 1; i < numc; i++) {
-		
-		if (nums[i] != prev) {
+	int position = 1;
 
-			prev = nums[i];
-			pos++;
-			nums[pos] = nums[i];
+	for (int i = position; i < numsSize; i++) {
 
+		if (nums[i] != nums[position-1]) {
+			nums[position] = nums[i];
+			position++;
 		}
-
 	}
-	return pos+1; //ERR: cant return 0 if empty / but constraints say is >=1 so
+	return position;
+
 }
 
 

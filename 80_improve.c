@@ -5,15 +5,15 @@
 #include <stdlib.h>
 
 
-int unduplify(int* nums, int numc) {
+int unduplify(int* nums, int numsSize) {
 
-	if (numc <= 2) {
-		return numc;
+	if (numsSize <= 2) {
+		return numsSize;
 	}
 
 	int pos = 2;
 
-	for (int i = 2; i < numc; i++) {
+	for (int i = 2; i < numsSize; i++) {
 		if (nums[i] != nums[pos-2]) {
 			nums[pos++] = nums[i];
 		}

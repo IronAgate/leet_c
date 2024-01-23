@@ -1,10 +1,10 @@
+//leetcode 88 / arg names incorrect for actual submission
 #include <stdio.h>
 #include <stdlib.h>
 
 int compare(const void *x, const void *y) {
 	
-	//return (*(int*)x - *(int*)y);
-	return (*(int*)y - *(int*)x);
+	return (*(int*)x - *(int*)y);
 
 }
 
